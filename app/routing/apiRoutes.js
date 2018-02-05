@@ -2,14 +2,13 @@ var friends = ('../app/data/friends');
 
 module.exports = function (app) {
 
-  app.get('/data/friends', function (req, res) {
-    res.json(tableDAta);
+  app.get('/api/friends', function (req, res) {
+    res.json(friends);
   });
 
-  app.post('/api/clear', function () {
-    // Empty out the arrays of data
-    tableData = [];
+  app.post('/api/friends', function (req, res) {
 
-    console.log(tableData);
-  });
+    });
+
+  console.log(friends);
 };
