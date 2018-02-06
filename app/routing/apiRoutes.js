@@ -8,7 +8,5 @@ module.exports = function (app) {
 
   app.post('/api/friends', function (req, res) {
       var friendsArray = req.body;
-
-      res.json(friendsArray);
     });
 };
