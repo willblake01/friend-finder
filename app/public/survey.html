@@ -211,7 +211,7 @@
         </div>
         <div class='modal-body'>
           <h2 id='matchName'></h2>
-          <img id='matchImg' src='#'></img>
+          <img id='matchImg' src='$('photo').attr('class', 'href')'></img>
         </div>
         <div class='modal-footer'>
           <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
@@ -224,26 +224,55 @@
 // Capture the form inputs
 $('#submit').on('click', function () {
 
-      // Create object for user data
-      var userData = {
-        name: $('#name').val(),
-        photo: $('#photo').val(),
-        scores: []
-      };
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $('.form-control').each(function () {
+          if ($(this).val() === '')
+              isValid = false;
+        });
 
-      // Grab the URL of the website
-      var currentURL = window.location.origin;
+        $('.custom-select').each(function () {
+          if ($(this).val() === '')
+              isValid = false;
+        });
 
-      // AJAX post the data to the friends API
-      $.post(currentURL + '/api/friends', userData, function (data) {
+        return isValid;
+      }
 
-        // Grab the best result from the AJAX post and display
-        $('#matchName').text(data.name);
-        $('#matchImg').attr('src', data.photo);
+      // If all required fields are filled
+      if (validateForm() == true)
+      {
 
-        // Show the modal with the best match
-        $('#resultsModal').modal('toggle');
-      });
+        // Create object for user data
+        var userData = {
+          name: $('#name').val(),
+          photo: $('#photo').val(),
+          scores: [$('q1').val(), $('q2').val(), $('q3').val(), $('q4').val(), $('q5').val(),
+           $('q6').val(), $('q7').val(), $('q8').val(), $('q9').val(), $('q10').val()]
+        };
+        console.log(userData);
+
+        // Grab the URL of the website
+        var currentURL = window.location.origin;
+
+        // AJAX post the data to the friends API
+        $.post(currentURL + '/api/friends', userData, function (data) {
+
+          // Grab the best result from the AJAX post and display
+          $('#matchName').text(data.name);
+          $('#matchImg').attr('src', data.photo);
+
+          // Show the modal with the best match
+          $('#resultsModal').modal('toggle');
+        });
+      } else {
+        {
+          alert('Please fill out all fields before submitting!');
+        }
+      }
+
+      return false;
     });
   </script>
 </body>
