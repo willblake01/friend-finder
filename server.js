@@ -7,6 +7,8 @@ var PORT = process.env.PORT || 8080;
 // Setup express server
 var app = express();
 
+app.use(express.static(path.join(__dirname + '/app/public')));
+
 // Set up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

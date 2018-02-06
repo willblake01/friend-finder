@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/friends.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.jumbotron {
+  opacity: 0.8;
+}
