@@ -1,0 +1,15 @@
+* {
+	box-sizing: border-box;
+}
+
+h3 {
+  color: green;
+}
+
+.custom-select {
+  width: 170px;
+}
+
+body {
+	background-image: url("../images/cup.jpg");
+}
