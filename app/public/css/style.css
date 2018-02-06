@@ -12,3 +12,16 @@ body {
 .jumbotron {
   opacity: 0.8;
 }
+
+#copyright {
+  padding: 40px;
+  font-size: 12px;
+  color: #ccc;
+  text-align: center;
+  background: #666;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+}
