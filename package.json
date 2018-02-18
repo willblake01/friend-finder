@@ -1,7 +1,7 @@
 {
   "name": "FriendFinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "*What does it do?*<br> Friend Finder is a full stack application to match anonymous users based on answers to a standardized personality quiz. The application takes the users answers and finds the closest match based on other users' answers.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,8 +21,6 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "file-system": "^2.2.2",
-    "nodemon": "^1.14.12",
     "path": "^0.12.7"
   }
 }
