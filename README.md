@@ -1,4 +1,4 @@
-# FriendFinder
+# Friend Finder
 
 *What does it do?*<br>
 Friend Finder is a full stack application to match anonymous users based on answers to a standardized personality quiz. The application takes the users answers and finds the closest match based on other users' answers.
