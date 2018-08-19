@@ -1,9 +1,9 @@
-var friendsArray = require('../data/friends');
+var friends = require('../data/friends');
 
 module.exports = function (app) {
 
   app.get('/api/friends', function (req, res) {
-    res.json(friendsArray);
+    res.json(friends);
   });
 
   app.post('/api/friends', function (req, res) {
@@ -35,7 +35,8 @@ module.exports = function (app) {
       var currentFriend = friends[i];
       totalDifference = 0;
 
-      console.log(currentFriend.name);
+      console.log(currentFriend);
+      console.log(req.body);
 
       // We then loop through all the scores of each friend
       for (var j = 0; j < currentFriend.scores.length; j++) {

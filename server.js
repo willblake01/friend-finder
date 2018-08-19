@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 
+// Set up port to be either the host's designated port, or 8080
 var PORT = process.env.PORT || 8080;
 
 // Setup express server
