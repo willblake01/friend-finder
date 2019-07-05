@@ -1,12 +1,12 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
 
 // Set up port to be either the host's designated port, or 8080
-var PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // Setup express server
-var app = express();
+const app = express();
 
 app.use(express.static(path.join(__dirname + '/app/public')));
 
